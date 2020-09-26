@@ -1,15 +1,18 @@
-a1 = int(input());
-b1 = int(input());
-c1 = int(input());
+A1 = int(input())
+B1 = int(input())
+C1 = int(input())
 
-a2 = int(input());
-b2 = int(input());
-c2 = int(input());
-
-if((a1 <= a2 and a1 <= b2 and a1 <= c2) and (b1 <= a2 and b1 <= b2 and b1 <= c2) and (c1 <= a2 and c1 <= b2 and c1 <= c2)):
+A2 = int(input())
+B2 = int(input())
+C2 = int(input())
+if((A1 <= A2 and B1 <= B2 and C1 <= C2) or (A1 <= A2 and B1 <= C2 and C1 <= B2) or (A1 <= C2 and B1 <= A2 and C1 <= B2) or 
+   (A1 <= B2 and B1 <= A2 and C1 <= C2) or (A1 <= B2 and B1 <= C2 and C1 <= A2) or (A1 <= C2 and B1 <= B2 and C1 <= A2)):
     print("The first box is smaller than the second one")
-elif((a2 <= a1 and a2 <= b1 and a2 <= c1) and (b2 <= a1 and b2 <= b1 and b2 <= c1) and (c2 <= a1 and c2 <= b1 and c2 <= c1)):
+elif((A1 == A2 and B1 == B2 and C1 == C2) or (A1 == A2 and B1 == C2 and C1 == B2) or (A1 == C2 and B1 == A2 and C1 == B2) or
+     (A1 == B2 and B1 == A2 and C1 == C2) or (A1 == B2 and B1 == C2 and C1 == A2) or (A1 == C2 and B1 == B2 and C1 == A2)):
+    print("Boxes are equal")
+elif ((A1 >= A2 and B1 >= B2 and C1 >= C2) or (A1 >= A2 and B1 >= C2 and C1 >= B2) or (A1 >= C2 and B1 >= A2 and C1 >= B2) or
+        (A1 >= B2 and B1 >= A2 and C1 >= C2) or (A1 >= B2 and B1 >= C2 and C1 >= A2) or (A1 >= C2 and B1 >= B2 and C1 >= A2)):
     print("The first box is larger than the second one")
-elif((a1 == a2))
-
-# How to check boxes are equal or not ?
+else:
+    print("Boxes are incomparable")
