@@ -2,6 +2,8 @@ s = str(input()).upper()
 counter = 0
 dic1 = {}
 iterator = 1
+my_chars = [".",",","?","!",":","A","B","C","D","E","F","G","H","I","J","K","L","M",
+            "N","O","P","Q","R","S","T","U","V","W","X","Y","Z"," "]
 phone_buttons = {1: {1: ".", 2: ",", 3: "?", 4: "!", 5: ":"},
                  2: {1: "A", 2: "B", 3: "C"},
                  3: {1: "D", 2: "E", 3: "F"},
@@ -18,6 +20,9 @@ for z in range(0, len(s)):
         for key1 in phone_buttons[key]:
             if(counter >= len(s)):
                 break
+            if(s[counter] not in my_chars):
+                print("here")
+                counter += 1
             if(phone_buttons[key][key1] == s[counter]):
                 for i in range(0, key1):
                     dic1.update({iterator : key})
