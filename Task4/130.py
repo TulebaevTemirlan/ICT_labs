@@ -21,7 +21,6 @@ for z in range(0, len(s)):
             if(counter >= len(s)):
                 break
             if(s[counter] not in my_chars):
-                print("here")
                 counter += 1
             if(phone_buttons[key][key1] == s[counter]):
                 for i in range(0, key1):
