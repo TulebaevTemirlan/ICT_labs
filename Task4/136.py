@@ -1,5 +1,5 @@
-s1 = str(input()).lower()
-s2 = str(input()).lower()
+s1 = str(input("Enter first string")).lower()
+s2 = str(input("Enter second string")).lower()
 s1 = s1.replace(" ", "")
 s2 = s2.replace(" ", "")
 s1 = sorted(s1)
